@@ -7,7 +7,7 @@ import datetime
 
 def log_call_info(func):
     def wrapper(*args, **kargs):
-        params = '%s %s' % (args, kargs)
+        params = '{0} {1}'.format(args, kargs)
         print "enter function {func}, params:{params}".format(func=func.__name__, params=params)
         ret = func(*args, **kargs)
         print "leave function {func}".format(func=func.__name__, params=params)
